@@ -121,7 +121,9 @@ async function createWindows(): Promise<void> {
   })
 
   pickerWindow.on('blur', () => {
-    pickerWindow?.hide()
+    setTimeout(() => {
+      pickerWindow?.hide()
+    }, 100)
   })
 
   if (PREFS_WINDOW_VITE_DEV_SERVER_URL && PICKER_WINDOW_VITE_DEV_SERVER_URL) {
